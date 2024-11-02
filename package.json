@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Projeto de desenvolvimento web com Node JS",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/antonioelisson/projetoNode1/issues"
   },
-  "homepage": "https://github.com/antonioelisson/projetoNode1#readme"
+  "homepage": "https://github.com/antonioelisson/projetoNode1#readme",
+  "dependencies": {
+    "express": "^4.21.1"
+  }
 }
