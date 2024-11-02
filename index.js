@@ -40,6 +40,7 @@ function depositar(requisicao, resposta){
         resposta.write(`<html>
                         <head>
                             <title>Depósito realizado!</title>
+                            <meta charset="UTF-8">
                         </head>
                         <body>
                             <h1>Depósito realizado!</h1>
@@ -50,12 +51,21 @@ function depositar(requisicao, resposta){
         resposta.end();
     }
     else{
-        resposta.write("É necessário informar o valor a ser depoisitado");
+        resposta.write(`<html>
+                        <head>
+                            <title>Depósito realizado!</title>
+                            <meta charset="UTF-8">
+                        </head>
+                    `);
+        resposta.write(`<body>
+                            <p>É necessário informar o valor a ser depoisitado</p>
+                        </body>
+                     `);
         resposta.end();
     }
 }
 
-app.get("\depositar", depositar);
+app.get("/depositar", depositar);
 
 app.listen(porta, host, () => {
     console.log("Servidor em execução http://" + host + ":" + porta);
